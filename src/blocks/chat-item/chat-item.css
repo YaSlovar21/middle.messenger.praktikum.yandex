@@ -1,0 +1,30 @@
+.chat-item {
+    border-top: 1px solid #EAEAEA;
+    padding: 12px 0;
+}
+.chat-item_active {
+    background-color: #E4EDFD;
+}
+
+.chat-item__avatar {
+    width: 47px;
+    height: 47px;
+    background-color: #EAEAEA;
+}
+
+.chat-item__name {
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1;
+}
+
+.chat-item__text-preview {
+    font-size: 12px;
+    line-height: 1.25;
+    font-weight: 500;
+    max-width: 193px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}

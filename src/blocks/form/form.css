@@ -1,0 +1,33 @@
+.form {
+    padding: 50px 30px 30px;
+    max-width: 340px;
+    margin: auto;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.14);
+    border-radius: 12px;
+}
+
+.form__title {
+    color: #1E1E1E;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.form__field {
+    margin-bottom: 16px;
+}
+
+.form__submit-button {
+    border: none;
+    outline: none;
+    background: none;
+    border-radius: 8px;
+    margin-top: 159px;
+    padding: 12px;
+    background-color: #3369F3;
+    font-size: 13px;
+    font-weight: 500;
+    color: #fff;
+    text-align: center;
+    width: 100%;
+}
