@@ -1,6 +1,6 @@
 .page__root {
-    flex: 1;
-    min-height: 0;
-    display: flex;
-    justify-content: center;
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  justify-content: center;
 }

@@ -1,5 +1,5 @@
 .chat__aside {
-    width: 310px;
-    overflow-y: auto;    
-    min-height: 0;      
+  width: 310px;
+  overflow-y: auto;
+  min-height: 0;
 }

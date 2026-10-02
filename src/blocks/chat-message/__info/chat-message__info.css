@@ -1,8 +1,8 @@
 .chat-message__info {
-    display: flex;
-    align-items: flex-end;
-    gap: 4px;
-    position: absolute;
-    bottom: 2px;
-    right: 2px;
+  display: flex;
+  align-items: flex-end;
+  gap: 4px;
+  position: absolute;
+  bottom: 2px;
+  right: 2px;
 }

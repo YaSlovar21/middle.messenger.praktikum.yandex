@@ -37,7 +37,6 @@
 @import url(./blocks/server-error/__description/server-error__description.css);
 @import url(./blocks/server-error/__link/server-error__link.css);
 
-
 @import url(./blocks/chat/chat.css);
 @import url(./blocks/chat/__view/chat__view.css);
 @import url(./blocks/chat/__message-input/chat__message-input.css);

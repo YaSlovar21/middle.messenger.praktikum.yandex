@@ -1,12 +1,12 @@
 .chat-item__text-preview {
-    margin: 0;
+  margin: 0;
 
-    font-size: 12px;
-    line-height: 1.25;
-    font-weight: 500;
-    max-width: 193px;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
+  font-size: 12px;
+  line-height: 1.25;
+  font-weight: 500;
+  max-width: 193px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }

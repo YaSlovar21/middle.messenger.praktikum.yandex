@@ -1,14 +1,14 @@
 .chat-item {
-    border-top: 1px solid #EAEAEA;
-    padding: 12px 0;
-    display: flex;
-    position: relative;
+  border-top: 1px solid #eaeaea;
+  padding: 12px 0;
+  display: flex;
+  position: relative;
 
-    cursor: pointer;
+  cursor: pointer;
 
-    transition: all .2s ease-in;
+  transition: all 0.2s ease-in;
 }
 
 .chat-item:hover {
-    background-color: #E4EDFD;
+  background-color: #e4edfd;
 }
