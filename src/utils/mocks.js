@@ -98,7 +98,7 @@ export const messages = [
     time: "11:56"
   },
   {
-    imageUrl: "/public/messphoto.jpg",
+    imageUrl: "/messphoto.jpg",
     time: "11:56"
   },
   {
