@@ -1,5 +1,6 @@
 .form-field {
     display: flex;
     flex-direction: column;
+    border-bottom: 1px solid #3369F3;
 }
 

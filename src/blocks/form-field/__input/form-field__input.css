@@ -1,7 +1,8 @@
 .form-field__input {
     border: none;
     outline: none;
-    border-bottom: 1px solid #3369F3;
+    
+    width: 100%;
     padding: 8px 0;
     font-size: 13px;
     line-height: 1;

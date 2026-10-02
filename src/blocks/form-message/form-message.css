@@ -1,0 +1,35 @@
+.form-message {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.form-message__input {
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    color: #1e1e1e;
+    font-size: 12px;
+    line-height: 1;
+    background-color: #EFEFEF;
+    border-radius: 30px;
+    flex-basis: 100%;
+}
+
+.form-message__file-button {
+    border: none;
+    outline: none;
+    background: none;
+}
+
+.form-message__submit-button {
+    border: none;
+    outline: none;
+    background-color: #3369F3;
+    border-radius: 50%;
+
+    flex-shrink: 0;
+    width: 28px;
+    height: 28px;
+    padding: 0;
+}

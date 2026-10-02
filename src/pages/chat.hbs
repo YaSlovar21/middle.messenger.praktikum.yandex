@@ -1,0 +1,27 @@
+<div class="chat">
+  <aside class="chat__aside">
+    <nav class="chat-list">
+      {{#each chats}}
+        {{> chat-item this}}
+      {{/each}}
+    </nav>
+  </aside>
+  <div class="chat__view">
+    <div class="chat__main">
+      {{#each messages}}
+        {{> chat-message this}}
+      {{/each}}
+    </div>
+    <div class="chat__message-input">
+      <form class="form-message">
+        <button class="form-message__file-button">
+          <img src="/public/skrepka.svg" alt="Добавить файл">
+        </button>
+        <input class="form-message__input" type="text">
+        <button class="form-message__submit-button">
+          <img src="/public/strelka.svg" alt="Отправить">
+        </button>
+      </form>
+    </div>
+  </div>
+</div>

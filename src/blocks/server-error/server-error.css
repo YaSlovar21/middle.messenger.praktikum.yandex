@@ -1,0 +1,6 @@
+.server-error {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+

@@ -1,21 +1,21 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>handlebars-project</title>
   </head>
-  <body>
-    <nav>
-      <button class="registration">Регистрация</button>
-      <button class="login">Вход</button>
-      <button class="chat">Чат</button>
-      <button class="settings">Настройки пользователя</button>
-      <button class="not-found">404</button>
-      <button class="server-error">500</button>
+  <body class="page">
+    <nav class="nav">
+      <a href="#" class="link link_size_lg registration">Регистрация</a>
+      <a href="#" class="link link_size_lg login">Вход</a>
+      <a href="#" class="link link_size_lg chat-nav-item">Чат</a>
+      <a href="#" class="link link_size_lg settings-nav-item">Настройки пользователя</a>
+      <a href="#" class="link link_size_lg not-found">404</a>
+      <a href="#" class="link link_size_lg server-error-nav-item">500</a>
     </nav>
-    <div id="app"></div>
+    <div class="page__root" id="app"></div>
     <script type="module" src="/src/index.js"></script>
   </body>
 </html>

@@ -1,5 +1,66 @@
+@import url(./styles/fonts.css);
+@import url(./blocks/page/page.css);
+@import url(./blocks/page/__root/page__root.css);
+
+@import url(./blocks/nav/nav.css);
+
+@import url(./blocks/settings/settings.css);
+
 @import url(./blocks/form/form.css);
+@import url(./blocks/form/_page/form_page_profile.css);
+@import url(./blocks/form/__title/form__title.css);
+@import url(./blocks/form/__field/form__field.css);
+@import url(./blocks/form/__submit-button/form__submit-button.css);
+
+@import url(./blocks/form-message/form-message.css);
 
 @import url(./blocks/form-field/form-field.css);
 @import url(./blocks/form-field/__title/form-field__title.css);
+@import url(./blocks/form-field/__title/_page/form-field__title_page_profile.css);
 @import url(./blocks/form-field/__input/form-field__input.css);
+@import url(./blocks/form-field/__input/_page/form-field__input_page_profile.css);
+@import url(./blocks/form-field/_page/form-field_page_profile.css);
+
+@import url(./blocks/badge/badge.css);
+
+@import url(./blocks/avatar/avatar.css);
+@import url(./blocks/avatar/__image/avatar__image.css);
+@import url(./blocks/avatar/_page/avatar_page_profile.css);
+@import url(./blocks/avatar/__change-button/avatar__change-button.css);
+
+@import url(./blocks/link/link.css);
+@import url(./blocks/link/_type/link_type_warning.css);
+@import url(./blocks/link/_size/link_size_lg.css);
+
+@import url(./blocks/server-error/server-error.css);
+@import url(./blocks/server-error/__title/server-error__title.css);
+@import url(./blocks/server-error/__description/server-error__description.css);
+@import url(./blocks/server-error/__link/server-error__link.css);
+
+
+@import url(./blocks/chat/chat.css);
+@import url(./blocks/chat/__view/chat__view.css);
+@import url(./blocks/chat/__message-input/chat__message-input.css);
+@import url(./blocks/chat/__main/chat__main.css);
+@import url(./blocks/chat/__aside/chat__aside.css);
+
+@import url(./blocks/chat-item/chat-item.css);
+@import url(./blocks/chat-item/_active/chat-item_active.css);
+@import url(./blocks/chat-item/__badge/chat-item__badge.css);
+@import url(./blocks/chat-item/__avatar/chat-item__avatar.css);
+@import url(./blocks/chat-item/__info/chat-item__info.css);
+@import url(./blocks/chat-item/__message/chat-item__message.css);
+@import url(./blocks/chat-item/__name/chat-item__name.css);
+@import url(./blocks/chat-item/__preview-span/chat-item__preview-span.css);
+@import url(./blocks/chat-item/__text-preview/chat-item__text-preview.css);
+@import url(./blocks/chat-item/__time/chat-item__time.css);
+
+@import url(./blocks/chat-message/chat-message.css);
+@import url(./blocks/chat-message/__text-wrapper/chat-message__text-wrapper.css);
+@import url(./blocks/chat-message/__text/chat-message__text.css);
+
+@import url(./blocks/chat-message/__info/chat-message__info.css);
+@import url(./blocks/chat-message/__time/chat-message__time.css);
+@import url(./blocks/chat-message/_my/chat-message_my.css);
+@import url(./blocks/chat-message/_type/chat-message_type_image.css);
+@import url(./blocks/chat-message/__time/_my/chat-message__time_my.css);

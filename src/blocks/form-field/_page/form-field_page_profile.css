@@ -1,0 +1,6 @@
+.form-field_page_profile {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #EAEAEA;
+}
