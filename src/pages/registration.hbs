@@ -1,0 +1,67 @@
+<main class="main">
+    <form class="form" action="/" method="post" novalidate>
+    <h2 class="form__title">Регистрация</h2>
+
+    {{> form-field
+        title="Почта"
+        class="form__field"
+        name="email"
+        id="reg-email"
+        type="email"
+        placeholder="pochta@yandex.ru"
+        required=true
+    }}
+
+    {{> form-field
+        title="Логин"
+        class="form__field"
+        name="login"
+        id="reg-login"
+        type="text"
+        placeholder="ivanivanov"
+        required=true
+    }}
+
+    {{> form-field
+        title="Имя"
+        class="form__field"
+        name="first_name"
+        id="reg-first-name"
+        type="text"
+        placeholder="Иван"
+        required=true
+    }}
+
+    {{> form-field
+        title="Фамилия"
+        class="form__field"
+        name="second_name"
+        id="reg-last-name"
+        type="text"
+        placeholder="Иванов"
+        required=true
+    }}
+
+    {{> form-field
+        class="form__field"
+        title="Телефон"
+        name="phone"
+        id="reg-phone"
+        type="tel"
+        placeholder="+7 (909) 967 30 30"
+        required=true
+    }}
+
+    {{> form-field
+        class="form__field"
+        title="Пароль"
+        name="password"
+        id="reg-password"
+        type="password"
+        placeholder="••••••••••••"
+        required=true
+    }}
+
+    <button class="form__submit-button" type="submit">Зарегистрироваться</button>
+    </form>
+</main>

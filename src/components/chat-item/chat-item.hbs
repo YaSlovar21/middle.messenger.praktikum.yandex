@@ -1,0 +1,14 @@
+<div class="chat-item">
+  {{> avatar 
+      class="chat-item__avatar"
+  }}
+  <div class="chat-item__avatar"></div>
+  <div class="chat-item__message">
+    <h3 class="chat-item__name">{{ name }}</h3>
+    <p class="chat-item__text-preview">{{ messagePreview }}</p>
+  </div>
+  <div class="chat-item__info">
+    <p class="chat-item__time">{{ time }}</p>
+    {{#if unreadCount }} <span class="badge chat-item__badge">{{ unreadCount }}</span> {{/if}}
+  </div>
+</div>

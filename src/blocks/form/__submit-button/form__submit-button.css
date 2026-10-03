@@ -1,0 +1,16 @@
+.form__submit-button {
+  border: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
+
+  border-radius: 8px;
+  margin-top: 159px;
+  padding: 12px;
+  background-color: #3369f3;
+  font-size: 13px;
+  font-weight: 500;
+  color: #fff;
+  text-align: center;
+  width: 100%;
+}

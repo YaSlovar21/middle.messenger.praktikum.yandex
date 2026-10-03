@@ -1,0 +1,15 @@
+.settings {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-basis: 510px;
+
+}
+
+.settings__links {
+  align-self: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 60px;
+}

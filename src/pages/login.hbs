@@ -1,0 +1,26 @@
+<main class="main">
+    <form class="form" action="/" method="post" novalidate>
+    <h2 class="form__title">Вход</h2>
+
+    {{> form-field
+        class="form__field"
+        title="Логин"
+        name="login"
+        id="login-login"
+        type="text"
+        placeholder="ivanivanov"
+        required=true
+    }}
+
+    {{> form-field
+        title="Пароль"
+        name="password"
+        id="login-password"
+        type="password"
+        placeholder="••••••••••••"
+        required=true
+    }}
+
+    <button class="form__submit-button" type="submit">Войти</button>
+    </form>
+</main>

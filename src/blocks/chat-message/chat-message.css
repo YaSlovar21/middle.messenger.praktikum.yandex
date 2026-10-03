@@ -1,0 +1,13 @@
+.chat-message {
+  position: relative;
+  font-size: 12px;
+  line-height: 1.25;
+  color: #1e1e1e;
+
+  padding: 11px;
+  box-sizing: border-box;
+  background-color: #f8f8f8;
+  max-width: 380px;
+  min-width: 114px;
+  align-self: flex-start;
+}

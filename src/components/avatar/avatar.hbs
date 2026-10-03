@@ -1,0 +1,11 @@
+<div class="avatar {{#if class}} {{class}} {{/if}}">
+    <img class="avatar__image" src="/avatar-no-image.jpg"  alt="аватар" >
+    {{#if isChangeButtonEnabled}} 
+    <form>
+        <label class="avatar__change-button">
+            Поменять аватар
+            <input type="file" name="avatar" class="avatar__file-input">
+        </label>
+    </form>
+    {{/if }}
+</div>
