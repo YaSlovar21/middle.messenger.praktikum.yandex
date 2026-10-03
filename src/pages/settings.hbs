@@ -1,4 +1,4 @@
-<div class="settings">
+<main class="settings">
     {{> avatar
         class="avatar_page_profile"
         isChangeButtonEnabled=true  
@@ -37,7 +37,7 @@
             class="form__field form-field_page_profile"
             titleClassModificator="form-field__title_page_profile"
             inputClassModificator="form-field__input_page_profile"
-            name="first-name"
+            name="first_name"
             id="profile-first-name"
             type="text"
             placeholder="Иван"
@@ -49,7 +49,7 @@
             class="form__field form-field_page_profile"
             titleClassModificator="form-field__title_page_profile"
             inputClassModificator="form-field__input_page_profile"
-            name="last-name"
+            name="second_name"
             id="profile-last-name"
             type="text"
             placeholder="Иванов"
@@ -61,7 +61,7 @@
             class="form__field form-field_page_profile"
             titleClassModificator="form-field__title_page_profile"
             inputClassModificator="form-field__input_page_profile"
-            name="display-name"
+            name="display_name"
             id="profile-display-name"
             type="text"
             placeholder="Иван"
@@ -88,8 +88,8 @@
     {{#unless isEditing}}
         <div class="settings__links">
             <a class="link link_size_lg change-data" href="#">Изменить данные</a>
-            <a class="link link_size_lg" href="#">Изменить пароль</a>
+            <a class="link link_size_lg change-password" href="#">Изменить пароль</a>
             <a class="link link_size_lg link_type_warning" href="#">Выйти</a>
         </div>
     {{/unless }}
-</div>
+<main>

@@ -29,7 +29,7 @@ const serverErrorButton = document.querySelector(".server-error-nav-item");
 regButton.addEventListener("click", () => renderRegistration(app));
 loginButton.addEventListener("click", () => renderLogin(app));
 chatButton.addEventListener("click", () => renderChat(app));
-settingsButton.addEventListener("click", () => renderSettings(app));
+settingsButton.addEventListener("click", () => renderSettings(app, {isEditing: false}));
 notFoundButton.addEventListener("click", () => render404(app));
 serverErrorButton.addEventListener("click", () => render500(app));
 

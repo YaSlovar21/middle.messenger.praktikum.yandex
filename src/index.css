@@ -2,7 +2,10 @@
 @import url(./blocks/page/page.css);
 @import url(./blocks/page/__root/page__root.css);
 
+@import url(./blocks/main/main.css);
+
 @import url(./blocks/nav/nav.css);
+@import url(./blocks/nav/__list/nav__list.css);
 
 @import url(./blocks/settings/settings.css);
 
@@ -24,6 +27,7 @@
 @import url(./blocks/badge/badge.css);
 
 @import url(./blocks/avatar/avatar.css);
+@import url(./blocks/avatar/__file-input/avatar__file-input.css);
 @import url(./blocks/avatar/__image/avatar__image.css);
 @import url(./blocks/avatar/_page/avatar_page_profile.css);
 @import url(./blocks/avatar/__change-button/avatar__change-button.css);
