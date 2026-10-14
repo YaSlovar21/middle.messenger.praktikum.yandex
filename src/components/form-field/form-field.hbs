@@ -1,0 +1,6 @@
+<!-- form-field.hbs -->
+<label class="form-field {{#if class}}{{class}}{{/if}}">
+    <span class="form-field__title {{#if titleClassModificator}} {{titleClassModificator}} {{/if}}">{{title}}</span>
+    <input class="form-field__input {{#if inputClassModificator}} {{inputClassModificator}} {{/if}}" type="{{type}}" name="{{name}}"  id="{{id}}" placeholder="{{placeholder}}" {{#if required}}required{{/if}}>
+    <span class="form-field__error {{id}}-error"></span>
+</label>

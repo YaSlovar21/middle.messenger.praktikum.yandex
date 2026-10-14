@@ -1,0 +1,14 @@
+<div class="chat-message {{#if isMine}}chat-message_my{{/if}} {{#if imageUrl}}chat-message_type_image{{/if}}">
+    {{#if imageUrl}}
+        <img class="chat-message__image" src="{{imageUrl}}" alt="Картинка в чате">
+    {{else}}
+        <div class="chat-message__text-wrapper">
+            <p class="chat-message__text">
+                {{text}}
+            </p>
+        </div>
+    {{/if}}
+    <div class="chat-message__info">
+        <div class="chat-message__time">{{time}}</div>
+    </div>
+</div>

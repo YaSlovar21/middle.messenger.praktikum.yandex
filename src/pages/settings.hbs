@@ -1,0 +1,95 @@
+<main class="settings">
+    {{> avatar
+        class="avatar_page_profile"
+        isChangeButtonEnabled=true  
+    }}
+
+ 
+    <form class="form form_page_profile" action="/" method="post" novalidate>
+        <h2 class="form__title">Иван</h2>
+
+        {{> form-field
+            title="Почта"
+            class="form__field form-field_page_profile"
+            titleClassModificator="form-field__title_page_profile"
+            inputClassModificator="form-field__input_page_profile"
+            name="email"
+            id="profile-email"
+            type="email"
+            placeholder="pochta@yandex.ru"
+            required=true
+        }}
+
+        {{> form-field
+            title="Логин"
+            class="form__field form-field_page_profile"
+            titleClassModificator="form-field__title_page_profile"
+            inputClassModificator="form-field__input_page_profile"
+            name="login"
+            id="profile-login"
+            type="text"
+            placeholder="ivanivanov"
+            required=true
+        }}
+
+        {{> form-field
+            title="Имя"
+            class="form__field form-field_page_profile"
+            titleClassModificator="form-field__title_page_profile"
+            inputClassModificator="form-field__input_page_profile"
+            name="first_name"
+            id="profile-first-name"
+            type="text"
+            placeholder="Иван"
+            required=true
+        }}
+
+        {{> form-field
+            title="Фамилия"
+            class="form__field form-field_page_profile"
+            titleClassModificator="form-field__title_page_profile"
+            inputClassModificator="form-field__input_page_profile"
+            name="second_name"
+            id="profile-last-name"
+            type="text"
+            placeholder="Иванов"
+            required=true
+        }}
+
+        {{> form-field
+            title="Имя в чате"
+            class="form__field form-field_page_profile"
+            titleClassModificator="form-field__title_page_profile"
+            inputClassModificator="form-field__input_page_profile"
+            name="display_name"
+            id="profile-display-name"
+            type="text"
+            placeholder="Иван"
+            required=true
+        }}
+
+        {{> form-field
+            title="Телефон"
+            class="form__field form-field_page_profile"
+            titleClassModificator="form-field__title_page_profile"
+            inputClassModificator="form-field__input_page_profile"
+            name="phone"
+            id="profile-phone"
+            type="tel"
+            placeholder="+7 (909) 967 30 30"
+            required=true
+        }}
+        {{#if isEditing}}
+        <button class="form__submit-button" type="submit">
+            Сохранить
+        </button>
+        {{/if }}
+    </form>
+    {{#unless isEditing}}
+        <div class="settings__links">
+            <a class="link link_size_lg change-data" href="#">Изменить данные</a>
+            <a class="link link_size_lg change-password" href="#">Изменить пароль</a>
+            <a class="link link_size_lg link_type_warning" href="#">Выйти</a>
+        </div>
+    {{/unless }}
+<main>

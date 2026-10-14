@@ -1,0 +1,4 @@
+.chat-item__message {
+  display: flex;
+  flex-direction: column;
+}
