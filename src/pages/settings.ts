@@ -4,7 +4,7 @@ import { renderPasswordChange } from "./password-change.js";
 
 Handlebars.registerHelper("eq", (a, b) => a === b);
 
-export function renderSettings(root, { isEditing = true } = {}) {
+export function renderSettings(root: HTMLElement, { isEditing = true } = {}) {
   const template = Handlebars.compile(settingsTpl);
   const html = template({
     isEditing,

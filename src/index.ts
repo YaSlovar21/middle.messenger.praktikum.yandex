@@ -18,6 +18,12 @@ Handlebars.registerPartial("form-field", formFieldTpl);
 Handlebars.registerPartial("chat-item", chatItemTpl);
 Handlebars.registerPartial("chat-message", chatMessageTpl);
 
+const app = document.getElementById("app");
+
+if (!app) {
+  throw new Error("Root element #app not found");
+}
+
 /* меню для 1-2 спринта до роутинга */
 const regButton = document.querySelector(".registration");
 const loginButton = document.querySelector(".login");
@@ -26,11 +32,11 @@ const settingsButton = document.querySelector(".settings-nav-item");
 const notFoundButton = document.querySelector(".not-found");
 const serverErrorButton = document.querySelector(".server-error-nav-item");
 
-regButton.addEventListener("click", () => renderRegistration(app));
-loginButton.addEventListener("click", () => renderLogin(app));
-chatButton.addEventListener("click", () => renderChat(app));
-settingsButton.addEventListener("click", () => renderSettings(app, {isEditing: false}));
-notFoundButton.addEventListener("click", () => render404(app));
-serverErrorButton.addEventListener("click", () => render500(app));
+regButton?.addEventListener("click", () => renderRegistration(app));
+loginButton?.addEventListener("click", () => renderLogin(app));
+chatButton?.addEventListener("click", () => renderChat(app));
+settingsButton?.addEventListener("click", () => renderSettings(app, {isEditing: false}));
+notFoundButton?.addEventListener("click", () => render404(app));
+serverErrorButton?.addEventListener("click", () => render500(app));
 
 renderChat(app);
