@@ -1,13 +1,22 @@
 import Handlebars from 'handlebars';
 type EventListType = Partial<Record<keyof HTMLElementEventMap, (e: Event) => void>>;
 
-export default abstract class Block<Props extends object> {
+export interface BlockOwnProps {
+  __children?: Array<{
+    component: Block<object>;
+    embed(node: DocumentFragment): void;
+  }>;
+  __refs?: Record<string, Element>;
+}
+
+export default abstract class Block<Props extends BlockOwnProps = BlockOwnProps> {
 
   protected abstract template: string;
   protected props = {} as Props;
+  protected children: Block<object>[] = [];
+
   protected events: EventListType = {}; 
   protected refs: Record<string, Element> = {};
-
   private domElement: Element | null = null;
 
   constructor(props: Props = {} as Props) {
@@ -22,7 +31,18 @@ export default abstract class Block<Props extends object> {
 
     const fragment = templateElement.content;
     
-    const initObj: Record<string, Element> = {};
+    if (this.props.__children) { // СОСРЕДОТОЧИМСЯ ВОТ ЗДЕСЬ у LoginPage есть 2 чилдрена, но при компиляции мы
+      console.log(this.props.__children); // чилдрены есть 
+      this.children = this.props.__children.map((child) => child.component);
+
+      this.props.__children.forEach((child) => {
+        const div = document.createElement('div');
+        div.appendChild(fragment.cloneNode(true)); 
+        console.log(child, div.innerHTML)
+        child.embed(fragment); // после компиляции мы прокидываем в child.embed(темплэйту родителя) хотя компонент должен ембедится сам относительно себя
+      });
+    }
+    const defaultRefs = this.props?.__refs ?? {};
     
     this.refs = Array.from(fragment.querySelectorAll("[ref]")).reduce(
           (list, element) => {
@@ -32,9 +52,10 @@ export default abstract class Block<Props extends object> {
             }
             list[key] = element;
             element.removeAttribute("ref");
+            
             return list;
           },
-          initObj
+          defaultRefs
     );
 
     return templateElement.content.firstElementChild;
@@ -49,7 +70,7 @@ export default abstract class Block<Props extends object> {
   }
 
   public setProps(props: Partial<Props>) {
-    this.props = { ...this.props, ...props };
+    this.props = { ...this.props, ...props, __children: [], __refs: {} } as Props;
     this.render();
   }
 
@@ -91,12 +112,15 @@ export default abstract class Block<Props extends object> {
   private mountComponent() {
     this.attachListeners();
     this.componentDidMount();
+    console.log(this);
   }
 
   protected componentWillUnmount() {}
 
   private unmountComponent() {
     if (this.domElement) {
+      this.children.reverse().forEach(child => child.unmountComponent());
+
       this.componentWillUnmount();
       this.removeListeners();
     }

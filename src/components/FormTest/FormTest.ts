@@ -1,15 +1,13 @@
 import Block from '../Block/Block.ts'
 
-interface FormTestProps {
-  buttonName: string;
-}
 
-class FormTest extends Block<FormTestProps> {
+
+class FormTest extends Block {
   protected template = `
     <form>
-      <input type="text" placeholder="Логин" ref="login">
-      <input type="password" placeholder="Пароль" ref="password">
-      <button>{{ buttonName }}</button>
+      {{{ Input type="text" placeholder="Логин" ref="login" validate="напиши регулярку и как мы ее будем ловить в хелпере и что делать в компоненте" }}}
+      {{{ Input type="password" placeholder="Пароль" ref="password" }}}
+      {{{ Button label="Авторизация" }}}
     </form>
   `;
 
@@ -23,8 +21,11 @@ class FormTest extends Block<FormTestProps> {
   protected events = {
     submit: (event : Event) => {
       event.preventDefault();
-      console.log((this.refs.login as HTMLInputElement).value);
-      console.log((this.refs.password as HTMLInputElement).value);
+      console.log(this.refs.login)
+      const input = this.refs.login.querySelector('#login') as HTMLInputElement;
+      const error = this.refs.login.querySelector('.login-error') as HTMLElement;
+
+      console.log(input.value);
     },
   };
   
