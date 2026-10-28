@@ -11,6 +11,14 @@ class FormTest extends Block {
     </form>
   `;
 
+  /*
+    телефон
+    const phoneRu = /^(?:\+7|8)\d{10}$/;
+    const nameRe = /^[А-ЯЁA-Z][а-яёa-z]*(?:[-\s][А-ЯЁA-Z][а-яёa-z]*)*$/;
+    const emailRe = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
+    /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/ пароль
+  */
+
   componentDidMount() {
     setTimeout(() => {
       // this.setProps({ buttonName: "Клик через 3 секунды!" }) // изменения пропсов включает перерендер, а перерендер вызывает componentDidMount
