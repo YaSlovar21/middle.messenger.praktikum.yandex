@@ -8,7 +8,7 @@ class Button extends Block<ButtonProps> {
   static readonly componentName = 'Button';
   
   protected template = `
-    <button>{{label}}</button>
+    <button class={{class}}>{{label}}</button>
   `;
 }
 

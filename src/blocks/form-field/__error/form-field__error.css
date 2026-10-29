@@ -1,0 +1,5 @@
+.form-field__error {
+  position: absolute;
+  bottom: 0%;
+  transform: translateX(-100%);
+}

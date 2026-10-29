@@ -28,6 +28,7 @@ function registerComponent<P extends BlockOwnProps>(Component: ComponentClass<P>
       
       if ('ref' in hash) {
         (data.root.__refs = data.root.__refs || {})[hash.ref] = component.element(); // у нас реф смотрит на компонент чтоли???
+        (data.root.__components = data.root.__components || []).push(component);
       }
       
       (data.root.__children = data.root.__children || []).push({

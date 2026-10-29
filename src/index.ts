@@ -14,7 +14,7 @@ import avatarTpl from "./components/avatar/avatar.hbs?raw";
 import chatMessageTpl from "./components/chat-message/chat-message.hbs?raw";
 import { renderPageComponent } from "./pages/block-page.js";
 import { registerComponent } from "./utils/utils.js";
-import Input from "./components/Input/Input.ts";
+import Input, { type InputProps } from "./components/Input/Input.ts";
 import Button, { type ButtonProps } from "./components/Button/Button.ts";
 
 Handlebars.registerPartial("avatar", avatarTpl);
@@ -22,7 +22,7 @@ Handlebars.registerPartial("form-field", formFieldTpl);
 Handlebars.registerPartial("chat-item", chatItemTpl);
 Handlebars.registerPartial("chat-message", chatMessageTpl);
 
-registerComponent(Input);
+registerComponent<InputProps>(Input);
 registerComponent<ButtonProps>(Button);
 
 const app = document.getElementById("app");
@@ -48,4 +48,4 @@ notFoundButton?.addEventListener("click", () => render404(app));
 serverErrorButton?.addEventListener("click", () => render500(app));
 pageComponentButton?.addEventListener("click", () => renderPageComponent(app));
 
-renderChat(app);
+renderPageComponent(app);

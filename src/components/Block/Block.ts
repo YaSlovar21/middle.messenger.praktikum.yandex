@@ -23,7 +23,10 @@ export default abstract class Block<Props extends BlockOwnProps = BlockOwnProps>
     this.props = props;
   }
 
+ 
   private compile(): Element | null {
+    // после компиляции у объекта могут появиться детки, которые лежат в очереди на рендер
+    // в html после вставки лежат заглушки
     const html = Handlebars.compile(this.template)(this.props);
     const templateElement = document.createElement("template");
 
@@ -31,18 +34,21 @@ export default abstract class Block<Props extends BlockOwnProps = BlockOwnProps>
 
     const fragment = templateElement.content;
     
-    if (this.props.__children) { // СОСРЕДОТОЧИМСЯ ВОТ ЗДЕСЬ у LoginPage есть 2 чилдрена, но при компиляции мы
-      console.log(this.props.__children); // чилдрены есть 
+    if (this.props.__children) { 
+      // сохраним экзмемпляры детей
       this.children = this.props.__children.map((child) => child.component);
 
       this.props.__children.forEach((child) => {
         const div = document.createElement('div');
         div.appendChild(fragment.cloneNode(true)); 
-        console.log(child, div.innerHTML)
-        child.embed(fragment); // после компиляции мы прокидываем в child.embed(темплэйту родителя) хотя компонент должен ембедится сам относительно себя
+        // console.log(child, div.innerHTML)
+        child.embed(fragment); 
       });
     }
-    const defaultRefs = this.props?.__refs ?? {};
+
+    this.refs = this.props.__refs ?? {};
+    
+    /*const defaultRefs = this.props?.__refs ?? {};
     
     this.refs = Array.from(fragment.querySelectorAll("[ref]")).reduce(
           (list, element) => {
@@ -56,7 +62,7 @@ export default abstract class Block<Props extends BlockOwnProps = BlockOwnProps>
             return list;
           },
           defaultRefs
-    );
+    );*/
 
     return templateElement.content.firstElementChild;
   }
