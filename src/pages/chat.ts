@@ -1,13 +1,20 @@
-import Handlebars from "handlebars";
+import ChatPage from "../components/ChatPage/ChatPage.ts";
 import { chats, messages } from "../utils/mocks.ts";
-import chatTpl from "./chat.hbs?raw";
+
 
 export function renderChat(root: HTMLElement) {
-  const template = Handlebars.compile(chatTpl);
-  const html = template({
-    chats,
+  
+  const template = new ChatPage({
     messages,
+    chats
   });
 
-  root.innerHTML = html;
+  const element = template.element();
+
+  root.innerHTML = "";
+  
+  if (element) {
+    root.appendChild(element);
+    //form.setProps({ buttonName: "Клик" });
+  }
 }

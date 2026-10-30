@@ -1,25 +1,15 @@
 
-import loginTpl from "./login.hbs?raw";
-import Block from "../components/Block/Block";
-
-class LoginPage extends Block {
-  static readonly componentName = 'LoginPage';
-
-  protected template = `
-    ${loginTpl}
-  `;
-}
+import FormLogin from "../components/FormLogin/FormLogin";
 
 export function renderLogin(root: HTMLElement) {
 
-  const loginPageComp = new LoginPage();
-  console.log(loginPageComp);
-  const loginPageEl = loginPageComp.element();
+  const form = new FormLogin();
+  const formElement = form.element();
   
   root.innerHTML = "";
 
-  if (loginPageEl) {
-    root.appendChild(loginPageEl)
+  if (formElement) {
+    root.appendChild(formElement)
   }
 
 }

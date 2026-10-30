@@ -1,15 +1,13 @@
-import Handlebars from "handlebars";
-import passwordChangeTpl from "./password-change.hbs?raw";
-import { renderSettings } from "./settings.js";
+import FormPasswordChange from "../components/FormPasswordChange/FormPasswordChange.js";
 
 export function renderPasswordChange(root: HTMLElement) {
-  const template = Handlebars.compile(passwordChangeTpl);
-  const html = template({});
 
-  root.innerHTML = html;
+  const form = new FormPasswordChange();
+  const formElement = form.element();
+  
+  root.innerHTML = "";
 
-  document.querySelector(".form")?.addEventListener("submit", (evt)=> {
-    evt.preventDefault();
-    renderSettings(root, {isEditing: false});
-  })
+  if (formElement) {
+    root.appendChild(formElement)
+  }
 }

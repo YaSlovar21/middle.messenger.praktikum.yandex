@@ -1,0 +1,17 @@
+<main class="settings">
+    {{{ Avatar
+        class="avatar_page_profile"
+        isChangeButtonEnabled=true 
+        ref="avatar1" 
+    }}}
+
+ 
+    {{{ FormSettings }}}
+    {{!unless isEditing добавим потом в роутинге
+        <div class="settings__links">
+            <a class="link link_size_lg change-data" href="#">Изменить данные</a>
+            <a class="link link_size_lg change-password" href="#">Изменить пароль</a>
+            <a class="link link_size_lg link_type_warning" href="#">Выйти</a>
+        </div>
+    {{/unless }}
+<main>

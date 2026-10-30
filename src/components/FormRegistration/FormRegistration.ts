@@ -1,9 +1,16 @@
+import type { BlockOwnProps } from '../Block/Block.ts';
 import Form from '../Form/Form.ts';
 
+export interface IFormRegistration extends BlockOwnProps{
+  title: string
+}
+
 class FormRegistration extends Form {
+  static readonly componentName = 'FormRegistration';
+
   protected template = `
     <form class="form" action="/" method="post" novalidate>
-      <h2 class="form__title">Регистрация</h2>
+      <h2 class="form__title">fdfd</h2>
       {{{ Input
           class="form__field"
         title="Почта"

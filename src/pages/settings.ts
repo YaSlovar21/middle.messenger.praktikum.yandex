@@ -1,11 +1,17 @@
-import Handlebars from "handlebars";
-import settingsTpl from "./settings.hbs?raw";
-import { renderPasswordChange } from "./password-change.js";
-
-Handlebars.registerHelper("eq", (a, b) => a === b);
+import SettingsPage from "../components/SettingsPage/SettingsPage";
 
 export function renderSettings(root: HTMLElement, { isEditing = true } = {}) {
-  const template = Handlebars.compile(settingsTpl);
+
+  const sPage = new SettingsPage();
+
+  const element = sPage.element();
+  root.innerHTML = "";
+  
+  if (element) {
+    root.appendChild(element);
+  }
+
+ /* const template = Handlebars.compile(settingsTpl);
   const html = template({
     isEditing,
   });
@@ -27,5 +33,5 @@ export function renderSettings(root: HTMLElement, { isEditing = true } = {}) {
   root.querySelector(".form__submit-button")?.addEventListener("click", (e) => {
     e.preventDefault();
     renderSettings(root, { isEditing: false });
-  });
+  });*/
 }

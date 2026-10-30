@@ -1,14 +1,16 @@
-<main class="main">
+import Form from "../Form/Form";
+
+
+class FormLogin extends Form {
+  protected template = `
     <form class="form" action="/" method="post" novalidate>
     <h2 class="form__title">Вход</h2>
-
     {{{  Input
         class="form__field"
         title="Логин"
         ref="login"
         name="login"
-        id="login-login"
-        type="text"
+        validate="login"
         placeholder="ivanivanov"
         required=true
     }}}
@@ -17,12 +19,27 @@
         title="Пароль"
         name="password"
         ref="password"
-        id="login-password"
         type="password"
         placeholder="••••••••••••"
+        validate="password"
         required=true
     }}}
 
     <button class="form__submit-button" type="submit">Войти</button>
-    </form>
-</main>
+  </form>
+  `;
+
+  protected events = {
+    submit: (event : Event) => {
+      event.preventDefault();
+
+      if (this.validateAll()) {
+        console.log(
+          this.aggValues()
+        );
+      }
+    },
+  };
+}
+
+export default FormLogin;

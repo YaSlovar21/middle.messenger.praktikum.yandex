@@ -1,0 +1,31 @@
+<main class="chat">
+  <aside class="chat__aside">
+    <nav class="chat-list">
+      {{#each chats}}
+          {{{ChatItem 
+              name=this.name
+              time=this.time
+              messagePreview=this.messagePreview
+              unreadCount=this.unreadCount
+          }}}
+      {{/each}}
+    </nav>
+  </aside>
+  <div class="chat__view">
+    <div class="chat__main">
+      {{#each messages}}
+        {{{ ChatMessage
+            text= this.text
+            imageUrl= this.imageUrl
+            time= this.time
+            isMine= this.isMine
+        }}}
+      {{/each}}
+        
+    </div>
+    <div class="chat__message-input">
+      {{{FormMessage}}}
+      
+    </div>
+  </div>
+</main>

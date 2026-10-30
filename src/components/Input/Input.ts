@@ -45,13 +45,17 @@ class Input extends Block<InputProps> {
 
   protected events = {
     blur: () => {
-      console.log("hjhk")
+      // console.log("hjhk")
       this.validate();
     },
     input: () => {
       // чистим ошибку по мере ввода
+      // console.log("hjhk", this.getValue())
       const errorEl = this.getErrorEl();
       if (errorEl) errorEl.textContent = '';
+      this.validate();
+    
+     
     },
   };
 
@@ -76,8 +80,10 @@ class Input extends Block<InputProps> {
     }
 
     const error = validator(this.getValue());
+    
     const errorEl = this.getErrorEl();
-    if (errorEl) errorEl.textContent = error ?? '';
+    // console.log(error, errorEl)
+    if (error && errorEl) errorEl.textContent = error;
 
     return error;
   }

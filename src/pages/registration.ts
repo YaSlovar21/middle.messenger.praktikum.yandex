@@ -1,9 +1,17 @@
-import Handlebars from "handlebars";
-import registrationTpl from "./registration.hbs?raw";
+
+import FormRegistration from "../components/FormRegistration/FormRegistration";
 
 export function renderRegistration(root: HTMLElement) {
-  const template = Handlebars.compile(registrationTpl);
-  const html = template({});
+  
+  const form = new FormRegistration({
+    //title: "Регистрация"
+  });
+  const formElement = form.element();
 
-  root.innerHTML = html;
+  root.innerHTML = "";
+  
+  if (formElement) {
+    root.appendChild(formElement);
+    //form.setProps({ buttonName: "Клик" });
+  }
 }
