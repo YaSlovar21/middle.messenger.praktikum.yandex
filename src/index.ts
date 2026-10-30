@@ -2,11 +2,11 @@ import "./index.css";
 
 import Handlebars from "handlebars";
 
-import { renderRegistration } from "./pages/registration.ts";
-import { renderLogin } from "./pages/login.ts";
-import { renderChat } from "./pages/chat.ts";
-import { renderSettings } from "./pages/settings.ts";
-import { render500, render404 } from "./pages/error.ts";
+import { renderRegistration } from "./pages/registration";
+import { renderLogin } from "./pages/login";
+import { renderChat } from "./pages/chat";
+import { renderSettings } from "./pages/settings";
+import { render500, render404 } from "./pages/error";
 
 // import formFieldTpl from "./components/form-field/form-field.hbs?raw";
 // import chatItemTpl from "./components/chat-item/chat-item.hbs?raw";
@@ -14,16 +14,16 @@ import { render500, render404 } from "./pages/error.ts";
 // import chatMessageTpl from "./components/chat-message/chat-message.hbs?raw";
 // import { renderPageComponent } from "./pages/block-page.js";
 import { registerComponent } from "./utils/utils.js";
-import Input, { type InputProps } from "./components/Input/Input.ts";
-import Button, { type ButtonProps } from "./components/Button/Button.ts";
-import ErrorPage, { type IErrorPageProps } from "./components/ErrorPage/ErrorPage.ts";
-import FormRegistration from "./components/FormRegistration/FormRegistration.ts";
-import ChatItem, { type ChatItemType } from "./components/ChatItem/ChatItem.ts";
-import ChatMessage, {type ChatMessageType } from "./components/ChatMessage/ChatMessage.ts";
-import Avatar, { type AvatarType } from "./components/Avatar/Avatar.ts";
-import { renderPasswordChange } from "./pages/password-change.ts";
-import FormMessage from "./components/FormMessage/FormMessage.ts";
-import FormSettings from "./components/FormSettings/FormSettings.ts";
+import Input, { type InputProps } from "./components/Input/Input";
+import Button, { type ButtonProps } from "./components/Button/Button";
+import ErrorPage, { type IErrorPageProps } from "./components/ErrorPage/ErrorPage";
+import FormRegistration from "./components/FormRegistration/FormRegistration";
+import ChatItem, { type ChatItemType } from "./components/ChatItem/ChatItem";
+import ChatMessage, {type ChatMessageType } from "./components/ChatMessage/ChatMessage";
+import Avatar, { type AvatarType } from "./components/Avatar/Avatar";
+import { renderPasswordChange } from "./pages/password-change";
+import FormMessage from "./components/FormMessage/FormMessage";
+import FormSettings from "./components/FormSettings/FormSettings";
 
 Handlebars.registerHelper("eq", (a, b) => a === b);
 // Handlebars.registerPartial("avatar", avatarTpl);
