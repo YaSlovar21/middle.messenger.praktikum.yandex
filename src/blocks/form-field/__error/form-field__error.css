@@ -1,0 +1,10 @@
+.form-field__error {
+  position: absolute;
+  bottom: 0%;
+  top: calc(100% + 2px);
+  transform: translateY(-100%);
+
+  font-size: 10px;
+  color: red;
+  z-index: 3;
+}
