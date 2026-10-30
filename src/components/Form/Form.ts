@@ -12,11 +12,13 @@ abstract class Form extends Block {
   }
 
   protected checkAll = (fields: Input[]) => {
-    return fields.map((f) => f.validate()).filter(i=>i).length      
+    return fields.map((f) => f.validate()).filter(i=>i).length  === 0 ? true : false    
   }
 
   protected validateAll() {
-    return this.checkAll(this.getValidatedFields())
+    const res = this.checkAll(this.getValidatedFields())
+    console.log(res);
+    return res
   }
 
   protected aggValues() {
