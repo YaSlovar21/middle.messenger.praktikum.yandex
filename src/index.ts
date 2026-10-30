@@ -2,11 +2,11 @@ import "./index.css";
 
 import Handlebars from "handlebars";
 
-import { renderRegistration } from "./pages/registration.js";
-import { renderLogin } from "./pages/login.js";
-import { renderChat } from "./pages/chat.js";
-import { renderSettings } from "./pages/settings.js";
-import { render500, render404 } from "./pages/error.js";
+import { renderRegistration } from "./pages/registration.ts";
+import { renderLogin } from "./pages/login.ts";
+import { renderChat } from "./pages/chat.ts";
+import { renderSettings } from "./pages/settings.ts";
+import { render500, render404 } from "./pages/error.ts";
 
 // import formFieldTpl from "./components/form-field/form-field.hbs?raw";
 // import chatItemTpl from "./components/chat-item/chat-item.hbs?raw";
