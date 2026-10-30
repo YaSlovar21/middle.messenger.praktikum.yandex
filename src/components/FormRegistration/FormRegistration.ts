@@ -10,7 +10,7 @@ class FormRegistration extends Form {
 
   protected template = `
     <form class="form" action="/" method="post" novalidate>
-      <h2 class="form__title">fdfd</h2>
+      <h2 class="form__title">Регистрация</h2>
       {{{ Input
           class="form__field"
         title="Почта"
@@ -62,7 +62,7 @@ class FormRegistration extends Form {
           type="tel"
           placeholder="+7 (909) 967 30 30"
           ref="phone"
-          validate="phoneRu"
+          validate="phone"
           required=true
       }}}
       
