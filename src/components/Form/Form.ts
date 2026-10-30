@@ -12,7 +12,7 @@ abstract class Form extends Block {
   }
 
   protected checkAll = (fields: Input[]) => {
-    return fields.map((f) => f.validate())      
+    return fields.map((f) => f.validate()).filter(i=>i).length      
   }
 
   protected validateAll() {
