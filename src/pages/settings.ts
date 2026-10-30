@@ -1,6 +1,6 @@
 import SettingsPage from "../components/SettingsPage/SettingsPage";
 
-export function renderSettings(root: HTMLElement, { isEditing = true } = {}) {
+export function renderSettings(root: HTMLElement) {
 
   const sPage = new SettingsPage();
 
